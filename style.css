@@ -1,0 +1,44 @@
+/* #banner{ */
+    /* background: url("https://picsum.photos/id/152/1600/800") no-repeat center center ;
+    background-size: cover;
+    padding-top: 200px;
+    padding-bottom: 200px; */
+/* } */
+#service h2, #contact h2{
+    position: relative;
+}
+#service h2::after,#contact h2:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 100px);
+    width: 200px;
+    height: 2px;
+    background:linear-gradient(30deg,black,white,black,);
+    background-size: 200%;
+    animation: title-d 1s infinite linear alternate;
+}
+@keyframes title-d{
+    from{background-position: 0%,0%;
+    }
+    to{background-position:100%,100%;
+    }
+}
+#up{
+    position: fixed;
+    z-index: 9999;
+    color: rgb(91, 172, 172);
+    cursor: pointer;
+    animation: gotop 1s infinite linear alternate;
+}
+
+@keyframes gotop{
+    from{ 
+        bottom: 30px;
+        right: 20px;
+    }
+    to{
+        bottom: 50px;
+        right: 20px;
+    }
+}
